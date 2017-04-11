@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/XDevFrame.iml" filepath="$PROJECT_DIR$/XDevFrame.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/xdev_frame_core/xdev_frame_core.iml" filepath="$PROJECT_DIR$/xdev_frame_core/xdev_frame_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xdev_frame_demo/xdev_frame_demo.iml" filepath="$PROJECT_DIR$/xdev_frame_demo/xdev_frame_demo.iml" />
     </modules>
   </component>
 </project>
