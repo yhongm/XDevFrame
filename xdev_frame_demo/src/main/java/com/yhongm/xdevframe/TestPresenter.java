@@ -13,22 +13,22 @@ import com.yhongm.xdev_frame_core.mvp.presenter.XDevPresenter;
  */
 
 public class TestPresenter extends XDevPresenter<TestContract.View> implements TestContract.Presenter {
-    TestResponse testResponse;
+    TestRepository testRepository;
 
     public TestPresenter(Context context) {
         super(context);
 
-        testResponse = new TestResponse(mContext);
-        addRepository(testResponse);
+        testRepository = new TestRepository(mContext);
+        addRepository(testRepository);
     }
 
     @Override
     public void clickBtn(String content) {
-        testResponse.clickBtn(content);
+        testRepository.clickBtn(content);
     }
 
     @Subscribe(threadMode = ThreadMode.ASYNC)
-    public void onMessageEvent(TestResponse testResponse) {
+    public void onMessageEvent(TestRepository testResponse) {
         Looper.prepare();
         Result<String> result = testResponse.getResult();
         if (result.succeeded()) {
