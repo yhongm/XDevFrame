@@ -25,12 +25,7 @@ public class TestActivity extends BaseMvpActivity<TestContract.View, TestContrac
         setContentView(inflateView);
         mEditText = (EditText) findViewById(R.id.input);
         mBtn = (Button) findViewById(R.id.btn);
-        mBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mPresenter.clickBtn(mEditText.getText().toString().trim());
-            }
-        });
+        mBtn.setOnClickListener(v -> mPresenter.clickBtn(mEditText.getText().toString().trim()));
     }
 
     @Override
