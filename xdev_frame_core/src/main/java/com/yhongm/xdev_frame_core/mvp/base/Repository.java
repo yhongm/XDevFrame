@@ -10,8 +10,8 @@ import com.yhongm.xdev_frame_core.custom_agera.Result;
 /**
  * Created by yhongm on 2017/03/22.
  *
- * @param <D> 数据
- */
+ * @param <D> 数据类
+ * */
 public abstract class Repository<D> extends BaseRepository<D> {
     private int errorCode = 0;
 
