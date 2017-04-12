@@ -8,8 +8,8 @@ import com.yhongm.xdev_frame_core.mvp.contract.Contract;
 
 /**
  * Created by yhongm on 2017/03/06.
+ * mvp activity基类
  */
-
 public abstract class BaseMvpActivity<V extends Contract.BaseView, T extends Contract.BasePresenter<V>> extends FragmentActivity {
     public T mPresenter;
     V mView;

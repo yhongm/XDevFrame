@@ -9,8 +9,9 @@ import com.yhongm.xdev_frame_core.custom_agera.Result;
 
 /**
  * Created by yhongm on 2017/03/22.
+ *
+ * @param <D> 数据
  */
-
 public abstract class Repository<D> extends BaseRepository<D> {
     private int errorCode = 0;
 
@@ -47,14 +48,6 @@ public abstract class Repository<D> extends BaseRepository<D> {
     public int getErrorCode() {
         return errorCode;
     }
-
-    /**
-     * 初始化bean实体
-     * String转换为entity实体的时候使用
-     *
-     * @return
-     */
-    protected abstract D initEntity();
 
 
 }

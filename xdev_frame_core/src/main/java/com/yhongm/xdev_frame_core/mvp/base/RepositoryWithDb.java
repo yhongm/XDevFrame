@@ -10,8 +10,10 @@ import java.util.ArrayList;
 
 /**
  * Created by yhongm on 2017/03/31.
+ *
+ * @param <ResultItemBean> 网络请求返回的结果
+ * @param <DbEntity>       数据库操作的实例
  */
-
 public abstract class RepositoryWithDb<ResultItemBean, DbEntity> extends BaseRepository<ArrayList<DbEntity>> {
     public RepositoryWithDb(Context context) {
         super(context);
