@@ -15,7 +15,6 @@
  <img src="/preview/repository.jpeg">
 
  ### 4，activity继承MvpActivity,泛型传入对应的Contract的View，Presenter.实现对应的接口，initPresenter方法初始化Presenter类.如果界面已经继承其他类，只需在activity的onCreate方法实例化对应的Presenter并调用presenter的attachView方法(其他组件的生命周期开始时候调用)，onDestory方法中调用presenter的detachView方法（其他组件的生命周期结束时候调用）
->>>>>>> 6689c74e4fc0131eb2103a1e4a6a4aef210b060f
  <img src="/preview/activity.jpeg"> 
 
 
