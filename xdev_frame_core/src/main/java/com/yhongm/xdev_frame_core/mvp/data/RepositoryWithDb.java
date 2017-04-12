@@ -1,17 +1,20 @@
-package com.yhongm.xdev_frame_core.mvp.base;
+package com.yhongm.xdev_frame_core.mvp.data;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.yhongm.xdev_frame_core.custom_agera.Result;
+import com.yhongm.xdev_frame_core.mvp.base.BaseRepository;
 
 import java.util.ArrayList;
 
 /**
  * Created by yhongm on 2017/03/31.
+ *  处理操作数据相关的业务逻辑的基类，子类继承本类实现包含网络和数据库操作数据的业务逻辑
+ * @param <ResultItemBean> 数据从网络请求返回的结果类型
+ * @param <DbEntity>       数据从数据库返回的结果类型
  */
-
 public abstract class RepositoryWithDb<ResultItemBean, DbEntity> extends BaseRepository<ArrayList<DbEntity>> {
     public RepositoryWithDb(Context context) {
         super(context);

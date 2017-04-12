@@ -19,7 +19,7 @@ public class TestPresenter extends XDevPresenter<TestContract.View> implements T
         super(context);
 
         testRepository = new TestRepository(mContext);
-        addRepository(testRepository);
+        addRepository(testRepository);//将数据Repository添加到presenter中
     }
 
     @Override
@@ -27,6 +27,10 @@ public class TestPresenter extends XDevPresenter<TestContract.View> implements T
         testRepository.clickBtn(content);
     }
 
+    /**
+     * 订阅方法接收respository数据处理返回结果
+     * @param testResponse
+     */
     @Subscribe(threadMode = ThreadMode.ASYNC)
     public void onMessageEvent(TestRepository testResponse) {
         Looper.prepare();

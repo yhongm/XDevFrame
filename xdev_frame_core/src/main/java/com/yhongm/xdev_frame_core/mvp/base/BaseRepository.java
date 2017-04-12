@@ -3,6 +3,7 @@ package com.yhongm.xdev_frame_core.mvp.base;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.google.gson.Gson;
 import com.yhongm.xdev_frame_core.custom_eventbus.EventBus;
 import com.yhongm.xdev_frame_core.custom_agera.BaseObservable;
 import com.yhongm.xdev_frame_core.custom_agera.Repositories;
@@ -16,7 +17,8 @@ import java.util.concurrent.Executors;
 
 /**
  * Created by yhongm on 2017/03/31.
- * 数据来源基类
+ * 操作数据的基类
+ * @param <D> 需要操作的数据类型
  */
 
 public class BaseRepository<D> extends BaseObservable implements Updatable, Supplier<Result<D>> {
@@ -56,6 +58,7 @@ public class BaseRepository<D> extends BaseObservable implements Updatable, Supp
         super.dispatchUpdate();
     }
 
+
     @Override
     public void update() {
         result = mRepository.get();
@@ -64,6 +67,17 @@ public class BaseRepository<D> extends BaseObservable implements Updatable, Supp
 
     public Repository<Result<D>> getRepository() {
         return mRepository;
+    }
+
+    /**
+     *  String转为bean
+     * @param result 需要转换的String
+     * @param entity 转换后的entity
+     * @param <Entity>
+     * @return
+     */
+    protected <Entity> Entity handleStringToEntity(String result,Entity entity){
+        return (Entity) new Gson().fromJson(result, entity.getClass());
     }
 
     @NonNull

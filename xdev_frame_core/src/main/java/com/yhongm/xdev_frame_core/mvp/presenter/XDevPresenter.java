@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 /**
  * Created by yhongm on 2017/03/17.
+ * 业务逻辑基类，子类通过继承本类实现业务逻辑的代码并将业务逻辑处理结果通过锲约反馈到界面
  */
 
 public abstract class XDevPresenter<V extends Contract.BaseView> implements Contract.BasePresenter<V> {

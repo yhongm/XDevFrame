@@ -2,6 +2,7 @@ package com.yhongm.xdev_frame_core.mvp.contract;
 
 /**
  * Created by yhongm on 2017/04/11.
+ * 协约类基类,包含页面操作的契约与业务逻辑的契约，子类通过继承本类实现业务逻辑和操作界面的锲约
  */
 
 public interface Contract {
