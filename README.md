@@ -10,12 +10,10 @@
  ### 2,定义类继承Repository实现方法，在getData中实现逻辑返回数据结果，在需要调用数据
  的地方dispatchUpdate方法
  <img src="/preview/repository.jpeg">
- ### 3,定义类继承XDevPresenter，泛型中传入对应的View和实现对应的Presenter接口
- 在构造函数中初始化Repository，并且调用addRepository方法将Repository加入
+ ### 3,定义类继承XDevPresenter，泛型中传入对应的View和实现对应的Presenter接口在构造函数中始化Repository，并且调用addRepository方法将Repository加入
  实现方法参数传入Repository，注解Subcribe。方法体内接受结果。
  <img src="/preview/repository.jpeg">
- ### 4，activity继承MvpActivity,泛型传入对应的Contract的View，Presenter.实现对应的
- 接口，initPresenter方法初始化Presenter类
+ ### 4，activity继承MvpActivity,泛型传入对应的Contract的View，Presenter实现对应的接口initPresenter方法初始化Presenter类
  <img src="/preview/activity.jpeg"> 
 
 
